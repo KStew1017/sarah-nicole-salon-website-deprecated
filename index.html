@@ -6,11 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="fonts/Northwell.ttf" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
 
     <title>Sarah Nicole Salon</title>
 </head>
 <body>
-    <h1>Sarah Nicole Salon</h1>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand mx-auto ml-lg-0" href="#">Sarah Nicole Salon</a>
+            <button class="navbar-toggler hamburger-button" type="button" data-toggle="collapse" data-target="#snsNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="snsNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item p-1 home active"><a class="nav-link text-center" href="index.html">home</a></li>
+                    <li class="nav-item p-1 stylists"><a class="nav-link text-center" href="stylists.html">stylists</a></li>
+                    <li class="nav-item p-1 location"><a class="nav-link text-center" href="location.html">location</a></li>
+                    <li class="nav-item p-1 about"><a class="nav-link text-center" href="about.html">about</a></li>
+                    <li class="nav-item p-1 contact"><a class="nav-link text-center" href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container hero">
+        <div class="row d-flex hero">
+            <div class="card card-animation col-lg-5 col-xl-3">
+                <div class="card-title">
+                    <h1 class="card-text">The artistry of style, the quality of experience, and the beauty of you.</h1>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">For more than 25 years our experienced stylists have provided top-notch services in a warm and welcoming environment that will make you feel right at home.</p>
+                </div>
+            </div>
+            <div class="offset-lg-2 p-0 img-animation">
+                <img src="images/temp-img.jpg" alt="Sarah Nicole Salon" class="img-fluid hero-image"/>
+            </div>
+        </div>
+    </div>
+    
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
