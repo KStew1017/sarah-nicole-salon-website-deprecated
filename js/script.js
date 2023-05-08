@@ -39,3 +39,19 @@ window.addEventListener('load', function() {
         }, 100);
     });
 });
+
+
+
+window.addEventListener('load', function() {
+    var heroElements = document.querySelectorAll('.text-animation');
+    heroElements.forEach(function(element) {
+        element.classList.remove('animate-text');
+        setTimeout(function() {
+            element.classList.add('animate-text');
+        }, 100);
+    });
+});
+
+const scrollText = document.querySelector('.scroll-text');
+const scrollTextClone = scrollText.cloneNode(true);
+scrollText.parentNode.appendChild(scrollTextClone);
