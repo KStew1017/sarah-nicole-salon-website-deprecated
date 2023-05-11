@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="fonts/Northwell.ttf" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
@@ -16,8 +17,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand mx-auto ml-lg-0" href="#">Sarah Nicole Salon</a>
-            <button class="navbar-toggler hamburger-button" type="button" data-toggle="collapse" data-target="#snsNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand mx-auto ml-lg-0 " href="#">Sarah Nicole Salon</a>
+            <button class="navbar-toggler hamburger-button mx-auto" type="button" data-toggle="collapse" data-target="#snsNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="animated-hamburger" id="hamburger"><span></span><span></span><span></span></div>
             </button>
             <div class="collapse navbar-collapse" id="snsNavbar">
@@ -34,7 +35,7 @@
 
     <div class="container d-flex hero">
         <div class="row hero-row">
-            <div class="card hero-card col-lg-5 col-xl-4">
+            <div class="card hero-card col-lg-5 col-xl-4 ">
                 <div class="card-title">
                     <h1 class="card-text">The artistry of style, the quality of experience, and the beauty of you.</h1>
                 </div>
@@ -86,20 +87,26 @@
     </div>
 
     <div class="container">
+        <div class="row">
+            <hr class="col divider">
+        </div>
+    </div>
+
+    <div class="container">
         <div class="row section-title">
-            <h1>Meet Us</h2>
+            <h1 class="col"><span class="swoosh">e</span> Meet Us <span class="swoosh">e</span></h2>
         </div>
     </div>
 
     <div class="container">
         <div class="row d-flex">
-            <div class="card stylist-card-odd col-lg-8 offset-lg-1">
-                <img src="images/salon-headshots-angela-cc.jpeg" alt="Angela Collins" class="img-fluid p-0 headshot-odd" id="angela-headshot"/>
+            <div class="card stylist-card-odd col-lg-8 offset-lg-1 p-0" id="first-stylist">
+                <img src="images/salon-headshots-angela-cc.jpeg" alt="Angela Collins" class="img-fluid headshot-odd" id="angela-headshot"/>
                 <div class="card-header mt-3">
                     <h2 class="card-text text-center stylist-name">Angela Collins</h2>
                 </div>
                 <div class="card-body">
-                    <p class="card-text stylist-bio">I have a passion for my craft which extends to all clients, no matter their age, and I take pride in delivering personalized hair services that meet each individual's needs.</p>
+                    <p class="card-text stylist-bio"><span class="quote1">"</span>I have a passion for my craft which extends to all clients, no matter their age, and I take pride in delivering personalized hair services that meet each individual's needs.<span class="quote2">"</span></p>
                 </div>
                 <div class="card-footer d-flex justify-content-center">
                     <a class="stylist-learn-more">Learn more...</a>
@@ -110,13 +117,13 @@
         
     <div class="container">
         <div class="row d-flex">
-            <div class="card stylist-card-even col-lg-8 offset-lg-3">
+            <div class="card stylist-card-even col-lg-8 offset-lg-3 p-0">
                 <img src="images/salon-headshots-becki-cc.jpeg" alt="Becki Hutchison" class="img-fluid p-0 headshot-even" id="becki-headshot"/>
                 <div class="card-header mt-3">
                     <h2 class="card-text text-center stylist-name">Becki Hutchison</h2>
                 </div>
                 <div class="card-body">
-                    <p class="card-text stylist-bio">With more years of experience than I care to mention, I have thoroughly enjoyed every bit of my time behind the chair helping people look their best.</p>
+                    <p class="card-text stylist-bio"><span class="quote1">"</span>With more years of experience than I care to mention, I have thoroughly enjoyed every bit of my time behind the chair helping people look their best.<span class="quote2">"</span></p>
                 </div>
                 <div class="card-footer d-flex justify-content-center">
                     <a class="stylist-learn-more">Learn more...</a>
@@ -127,13 +134,13 @@
         
     <div class="container">
         <div class="row d-flex">
-            <div class="card stylist-card-odd col-lg-8 offset-lg-1">
+            <div class="card stylist-card-odd col-lg-8 offset-lg-1 p-0">
                 <img src="images/salon-headshots-theresa-cc.jpeg" alt="Theresa Campbell" class="img-fluid p-0 headshot-odd" id="theresa-headshot"/>
                 <div class="card-header mt-3">
                     <h2 class="card-text text-center stylist-name">Theresa Campbell</h2>
                 </div>
                 <div class="card-body">
-                    <p class="card-text stylist-bio">With 36 years of experience in the beauty industry, as well as 23 years here at Sarah Nicole Salon, I have honed my skills and developed a deep passion for creating beautiful hairstyles that make my clients feel confident.</p>
+                    <p class="card-text stylist-bio"><span class="quote1">"</span>With 36 years of experience in the beauty industry, as well as 23 years here at Sarah Nicole Salon, I have honed my skills and developed a deep passion for creating beautiful hairstyles that make my clients feel confident.<span class="quote2">"</span></p>
                 </div>
                 <div class="card-footer d-flex justify-content-center">
                     <a class="stylist-learn-more">Learn more...</a>
@@ -144,13 +151,13 @@
 
     <div class="container">
         <div class="row d-flex">
-            <div class="card stylist-card-even col-lg-8 offset-lg-3">
+            <div class="card stylist-card-even col-lg-8 offset-lg-3 p-0">
                 <img src="images/salon-headshots-misty-cc.jpeg" alt="Misty Record" class="img-fluid p-0 headshot-even" id="misty-headshot"/>
                 <div class="card-header mt-3">
                     <h2 class="card-text text-center stylist-name">Misty Record</h2>
                 </div>
                 <div class="card-body">
-                    <p class="card-text stylist-bio">As a skilled nail artist with 5 years of experience, I specialize in creating unique and personalized nail designs that reflect each client's individual style and preferences.</p>
+                    <p class="card-text stylist-bio"><span class="quote1">"</span>As a skilled nail artist with 5 years of experience, I specialize in creating unique and personalized nail designs that reflect each client's individual style and preferences.<span class="quote2">"</span></p>
                 </div>
                 <div class="card-footer d-flex justify-content-center">
                     <a class="stylist-learn-more">Learn more...</a>
@@ -160,34 +167,49 @@
     </div>
 
     <div class="testimonials-section">
-        <div class="testimonials-background"></div>
         <div class="container">
             <div class="row justify-content-center">
-                <h1>Testimonals</h1>
+                <h1><span class="swoosh">k</span> Testimonals <span class="swoosh">k</span></h1>
             </div>
             <div class="row justify-content-center">
-                <div class="col-6">
-                    <div class="testimonial-card">
-                        <div class="card-body">
-                            <p class="card-text testimonial-text">"I have been going to Sarah Nicole Salon for over 20 years. I have always been very pleased with the service and the friendly atmosphere. I would highly recommend this salon to anyone."</p>
-                            <p class="card-text testimonial-name">- Linda</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="testimonial-card">
-                        <div class="card-body">
-                            <p class="card-text testimonial-text">"I have been going to Sarah Nicole Salon for over 20 years. I have always been very pleased with the service and the friendly atmosphere. I would highly recommend this salon to anyone."</p>
-                            <p class="card-text testimonial-name">- Linda</p>
-                        </div>
-                    </div>
+                <div class="col-12 marquee-box">
+                    <span class="marquee">
+                        <p class="testimonial-text">"I have been going to Sarah Nicole Salon for over<br> 20 years. I have always been very pleased with<br> the service and the friendly atmosphere. I would<br> highly recommend this salon to anyone."</p>
+                        <p class="testimonial-name">- Linda</p>
+                    </span>
+                    <span class="marquee">
+                        <p class="testimonial-text">"I have been going to Sarah Nicole Salon for over<br> 20 years. I have always been very pleased with<br> the service and the friendly atmosphere. I would<br> highly recommend this salon to anyone."</p>
+                        <p class="testimonial-name">- Linda</p>
+                    </span>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+
+    <footer>
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="footer-title">Sarah Nicole Salon</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <p class="footer-text"><i class="bi bi-map"></i> : 5001 Davis Blvd, North Richland Hills, TX 76180</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="footer-text"><i class="bi bi-telephone"></i> : 817-281-0262</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
 </body>
 </html>
