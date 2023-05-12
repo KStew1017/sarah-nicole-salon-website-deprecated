@@ -16,7 +16,9 @@ $(function () {
             .stylist-card-even, 
             .carousel, 
             .hero-card, 
-            .section-title h1
+            .section-title h1,
+            .map,
+            .row.section-title.aa
         `);
         
         const observer = new IntersectionObserver(
@@ -54,10 +56,38 @@ $(function () {
     window.addEventListener('scroll', navbarScroll);
 
 //---------- Testimonials marquee scroll -----------//
-    $('.marquee').marquee({
-        duration: 10000,
-        gap: 100,
+    const $mq = $('.marquee').marquee(
+        {
+        duration: 20000,
+        gap: 0,
+        direction: 'left',
         duplicated: true,
+        pauseOnHover: true
+        }
+    );
+
+    const $mq2 = $('.marquee2').marquee(
+        {
+        duration: 10000,
+        gap: 0,
+        direction: 'right',
+        duplicated: true,
+        pauseOnHover: true
+        }
+    );
+
+    $('.btn').click(function () {
+        $('.btn').toggleClass('active-btn');
+        if ($('#testimonial-pause').hasClass('active-btn')) {
+            $mq.marquee('pause');
+            $mq2.marquee('pause');
+        } else {
+            $mq.marquee('resume');
+            $mq2.marquee('resume');
+        }
     });
-})
+
+});
+
+
 
