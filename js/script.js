@@ -16,9 +16,8 @@ $(function () {
             .stylist-card-even, 
             .carousel, 
             .hero-card, 
-            .section-title h1,
-            .map,
-            .row.section-title.aa
+            .section-title,
+            .map
         `);
         
         const observer = new IntersectionObserver(
@@ -40,7 +39,8 @@ $(function () {
         .stylist-card-even, 
         .carousel, 
         .hero-card, 
-        .section-title h1
+        .section-title,
+        .map
         `).addClass('show');
     }
     
@@ -87,6 +87,44 @@ $(function () {
         }
     });
 
+//---------- Background parallax -----------//
+    if ($(window).width() > 768) {
+        $(window).scroll(function () {
+            parallax();
+        });
+    }
+
+    function parallax() {
+        const wScroll = $(window).scrollTop();
+
+        $('.parallax-wrapper').css('background-position', `center ${wScroll * .8}px`);
+
+        $('#icon1').css('transform', `translateY(${-wScroll * 0.4}px) rotate(${wScroll * 0.1}deg)`);
+        $('#icon2').css('transform', `translateY(${-wScroll * 0.3}px) rotate(${-wScroll * 0.18}deg)`);
+        $('#icon3').css('transform', `translateY(${-wScroll * 0.5}px) rotate(${wScroll * 0.12}deg)`);
+        $('#icon4').css('transform', `translateY(${-wScroll * 0.33}px) rotate(${-wScroll * 0.08}deg)`);
+        $('#icon5').css('transform', `translateY(${-wScroll * 0.5}px) rotate(${wScroll * 0.04}deg)`);
+        $('#icon6').css('transform', `translateY(${-wScroll * 0.37}px) rotate(${-wScroll * 0.1}deg)`);
+        $('#icon7').css('transform', `translateY(${-wScroll * 0.33}px) rotate(${wScroll * 0.1}deg)`);
+        $('#icon8').css('transform', `translateY(${-wScroll * 0.22}px) rotate(${-wScroll * 0.18}deg)`);
+        $('#icon9').css('transform', `translateY(${-wScroll * 0.37}px) rotate(${wScroll * 0.12}deg)`);
+        $('#icon10').css('transform', `translateY(${-wScroll * 0.3}px) rotate(${-wScroll * 0.08}deg)`);
+        $('#icon11').css('transform', `translateY(${-wScroll * 0.4}px) rotate(${wScroll * 0.04}deg)`);
+        $('#icon12').css('transform', `translateY(${-wScroll * 0.25}px) rotate(${-wScroll * 0.1}deg)`);
+        $('#icon13').css('transform', `translateY(${-wScroll * 0.23}px) rotate(${wScroll * 0.1}deg)`);
+        $('#icon14').css('transform', `translateY(${-wScroll * 0.18}px) rotate(${-wScroll * 0.18}deg)`);
+        $('#icon15').css('transform', `translateY(${-wScroll * 0.3}px) rotate(${wScroll * 0.12}deg)`);
+        $('#icon16').css('transform', `translateY(${-wScroll * 0.25}px) rotate(${-wScroll * 0.08}deg)`);
+        $('#icon17').css('transform', `translateY(${-wScroll * 0.31}px) rotate(${wScroll * 0.04}deg)`);
+        $('#icon18').css('transform', `translateY(${-wScroll * 0.16}px) rotate(${-wScroll * 0.1}deg)`);
+    }
+
+//---------- Meet us -----------//
+    if ($(window).width() < 768) {
+        $('.meet-us-container').toggle('hide');
+    } else if ($(window).width() > 768) {
+        $('.meet-us-mobile').toggle('hide');
+    }
 });
 
 

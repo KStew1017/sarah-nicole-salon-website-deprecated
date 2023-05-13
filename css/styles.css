@@ -171,6 +171,70 @@ body {
     background-color: var(--tan);
 }
 
+.parallax-bg {
+    position: fixed;
+    display: inline-flex;
+    justify-content: center;
+    top: 100%;
+    width: 100%;
+    overflow: visible;
+    z-index: -1;
+}
+
+.parallax-bg div,
+.parallax-bg2 div,
+.parallax-bg3 div {
+    margin: 0px auto;
+    opacity: .25;
+}
+
+.parallax-bg2 {
+    position: fixed;
+    display: inline-flex;
+    justify-content: center;
+    top: 120%;
+    width: 100%;
+    overflow: visible;
+    z-index: -1;
+}
+
+.parallax-bg3 {
+    position: fixed;
+    display: inline-flex;
+    justify-content: center;
+    top: 140%;
+    width: 100%;
+    overflow: visible;
+    z-index: -1;
+}
+
+.fa-scissors,
+.fa-spa,
+.fa-spray-can {
+    font-size: 5rem;
+    color: var(--green);
+    animation: spin 2s linear infinite;
+}
+
+.icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000;
+    border-radius: 50%;
+}
+  
+#icon1 {
+    top: 100px;
+    left: 50px;
+}
+  
+#icon2 {
+    top: 200px;
+    left: 200px;
+}
+  
+
 .container.hero {
     display: flex;
     justify-content: center;
@@ -202,6 +266,14 @@ body {
     color: var(--green);
 }
 
+.stylist-anchor {
+    text-decoration: none;
+}
+
+.stylist-anchor:hover {
+    text-decoration: none;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .carousel-indicators {
         transform: translate(314px, -210px) rotate(90deg) !important;
@@ -209,6 +281,37 @@ body {
 }
 
 @media (min-width: 992px) {
+
+    .parallax-wrapper {
+        background-image: url('../images/R.png');
+        mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
+        overflow: hidden;
+    }
+    
+    .section-title {
+        color: var(--green);
+        margin: 5% auto 5% auto;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(-200px);
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .section-title.show {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    .meet-us {
+        margin: 5% auto 10% auto !important;
+    }
+
+    .section-title h1 {
+        font-family: 'Northwell', sans-serif;
+        font-size: 5rem;
+    }
+
     .vert .carousel-item-next.carousel-item-left,
     .vert .carousel-item-prev.carousel-item-right {
         -webkit-transform: translate3d(0, 0, 0);
@@ -229,7 +332,7 @@ body {
 
     .carousel-inner {
         border-radius: 40px;
-        box-shadow: 0px 0px 50px 50px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 40px 40px rgba(0,0,0,0.15);
     }
     
     .carousel-control-prev {
@@ -302,6 +405,53 @@ body {
         transform: translateY(0px);
     }
 
+    .hero-card-bg .card-title,
+    .hero-card-bg .card-text {
+        opacity: 0;
+    }
+
+    .stylist-card-odd {
+        background-image: -moz-linear-gradient(to bottom left, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        background-image: -webkit-linear-gradient(to bottom left, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        background-image: linear-gradient(to bottom left, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        margin-bottom: 250px;
+        opacity: 0;
+        transform: translateX(200px);
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .stylist-card-even {
+        background-image: -moz-linear-gradient(to bottom right, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        background-image: -webkit-linear-gradient(to bottom right, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        background-image: linear-gradient(to bottom right, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        margin-bottom: 250px;
+        opacity: 0;
+        transform: translateX(-200px);
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .stylist-card-odd.show,
+    .stylist-card-even.show {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    .stylist-card-even:hover {
+        transform: translateX(-50px) translateY(50px);
+    }
+
+    .stylist-card-odd:hover {
+        transform: translateX(50px) translateY(50px);
+    }
+    
+    .stylist-card-even:hover .headshot-even {
+        transform: scale(1.1) translateX(50px) translateY(-25px);
+    }
+
+    .stylist-card-odd:hover .headshot-odd {
+        transform: scale(1.1) translateX(-50px) translateY(-25px);
+    }
+
     .headshot-odd {
         border-radius: 50%;
         box-shadow: 0px 0px 25px 25px rgba(0,0,0,0.15);
@@ -312,6 +462,7 @@ body {
         top: -150px;
         right: -150px;
         z-index: 1;
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     
     .headshot-even {
@@ -324,6 +475,7 @@ body {
         top: -150px;
         left: -150px;
         z-index: 1;
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     .carousel {
@@ -385,6 +537,36 @@ body {
 }
 
 @media (max-width: 991px) {
+
+    .parallax-wrapper {
+        background-image: url('../images/R.png');
+        background-size: contain;
+        overflow: hidden;
+    }
+
+    .section-title {
+        color: var(--green);
+        margin: 10% auto 10% auto;
+        text-align: center;
+    }
+
+    .section-title.show {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    .swoosh-mobile {
+        font-family: 'Northwell Swash', sans-serif !important;
+        color: var(--green);
+        font-size: 1.5rem;
+    }
+
+    .section-title h1 {
+        font-family: 'Northwell', sans-serif;
+        font-size: 5vh;
+        width: 100%;
+    }
+
     ::-webkit-scrollbar {
         display: none;
     }
@@ -432,19 +614,10 @@ body {
         align-content: center;
     }
 
-    .container .row.section-title {
-        margin-top: 100px;
-    }
-
-    .section-title h1 {
-        opacity: 1;
-        transform: none !important;
-        transition: none !important;
-    }
-    
-    .section-title h1.show {
-        opacity: 1;
-        transform: none !important;
+    .carousel {
+        width: 100%;
+        align-content: center;
+        margin-bottom: 50px;
     }
 
     .carousel-indicators li {
@@ -466,12 +639,10 @@ body {
         margin: 0px 10px;
     }
 
-    .meet-us,
-    .swoosh {
-        position: relative;
-        font-size: 2rem;
-        margin-top: 200px;
+    .hide {
+        display: none;
     }
+
 
     .card {
         position: relative;
@@ -498,6 +669,9 @@ body {
 
     .stylist-card-even,
     .stylist-card-odd {
+        background-image: -moz-linear-gradient(to bottom left, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        background-image: -webkit-linear-gradient(to bottom left, var(--blue) 10%, var(--green),var(--blue), var(--green));
+        background-image: linear-gradient(to bottom left, var(--blue) 10%, var(--green),var(--blue), var(--green));
         display: flex;
         position: relative;
         width: 80%;
@@ -531,8 +705,8 @@ body {
         display: none;
     }
 
-    .card-footer {
-        display: none !important;
+    .stylist-click-me {
+        font-size: .75rem !important;
     }
 
     .card-header {
@@ -547,6 +721,10 @@ body {
         font-size: 2.5rem;
     }
 
+    .testimonials-section {
+        box-shadow: none !important;
+    }
+
     .testimonials-swoosh {
         font-size: 1rem;
     }
@@ -558,22 +736,6 @@ body {
     
     .testimonial-name {
         font-size: 2rem !important;
-    }
-
-    .row.section-title.aa {
-        margin: 0px;
-    }
-
-    h1.col.location-section.show {
-        margin: 50px auto 0px auto !important;
-    }
-
-    .location-map {
-        font-size: 2rem;
-    }
-
-    .location-swoosh {
-        font-size: 1.25rem;
     }
 
     .map {
@@ -616,56 +778,8 @@ body {
     display: none;
 }
 
-.section-title h1 {
-    font-family: 'Northwell', sans-serif;
-    color: var(--green);
-    font-size: 4rem;
-    text-align: center;
-    margin: 5% 0px 15% 0px;
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-
-.section-title h1.show {
-    opacity: 1;
-    transform: translateX(0px);
-}
-
 .divider {
     margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-.stylist-card-odd {
-    background-color: #013220;
-    background-image: url('../images/stylist-bg.jpg');
-    background-size: fill;
-    background-position: center;
-    background-repeat: repeat;
-    margin-bottom: 250px;
-    opacity: 0;
-    transform: translateX(200px);
-    transition: 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.stylist-card-even {
-    background-color: #013220;
-    background-image: url('../images/stylist-bg.jpg');
-    background-size: fill;
-    background-position: center;
-    background-repeat: repeat;
-    margin-bottom: 250px;
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.stylist-card-odd.show,
-.stylist-card-even.show {
-    opacity: 1;
-    transform: translateX(0px);
 }
 
 .card-header {
@@ -693,16 +807,11 @@ body {
     padding: 20px;
 }
 
-.stylist-learn-more {
+.stylist-click-me {
     font-family: 'Constantia', sans-serif;
     color: #a7a7a7;
     font-size: 1.25rem;
     text-align: center;
-    cursor: pointer;
-}
-
-.stylist-learn-more:hover {
-    color: var(--tan);
 }
 
 .background-img-card {
@@ -715,13 +824,16 @@ body {
     z-index: 0;
 }
 
+
 .testimonials-section {
     background-color: var(--blue);
-    background-image: url('../images/R.png');
-    background-size: contain;
+    background-image: url('../images/leaves.png');
+    background-size: cover;
     background-repeat: repeat;
-    background-blend-mode: overlay;
+    background-attachment: fixed;
+    opacity: 1;
     overflow: hidden;
+    box-shadow: 0px 0px 50px 50px rgba(0,0,0,0.15);
 }
 
 .testimonials-section h1 {
@@ -780,8 +892,16 @@ body {
 
 footer {
     padding: 40px 0px 40px 0px;
-    background-color: var(--blue);
+    background-color: var(--green);
+    background-image: url('../images/leaves.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px 50px rgba(0,0,0,0.15);
     color: var(--light);
+    bottom: 0%;
 }
 
 .footer-title {
@@ -834,8 +954,8 @@ a:hover {
 }
 
 .map {
-    margin: 100px auto;
-    height: 70vh;
+    margin: 0px auto 100px auto;
+    height: 60vh;
     width: 100%;
     border: none;
     border-radius: 30px;
@@ -850,10 +970,6 @@ a:hover {
     opacity: 1;
 }
 
-h1.col.location-section.show {
-    margin: 100px auto 0px auto;
-}
-
-#location {
-
+.map:hover {
+    transform: scale(1.05);
 }
