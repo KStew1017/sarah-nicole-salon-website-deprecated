@@ -210,7 +210,17 @@ body {
 
 .fa-scissors,
 .fa-spa,
-.fa-spray-can {
+.fa-spray-can,
+.fa-palette,
+.fa-motorcycle,
+.fa-caravan,
+.fa-sailboat,
+.fa-music,
+.fa-cross,
+.fa-dog,
+.fa-paintbrush,
+.fa-house-chimney-window,
+.fa-chair-office {
     font-size: 5rem;
     color: var(--green);
     animation: spin 2s linear infinite;
@@ -248,7 +258,7 @@ body {
 .card {
     border: none;
     border-radius: 30px;
-    background-color: rgba(232, 223, 218, .5);
+    background-color: rgba(232, 223, 218, .75);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     box-shadow: 0px 0px 50px 50px rgba(0,0,0,0.15);
@@ -972,4 +982,316 @@ a:hover {
 
 .map:hover {
     transform: scale(1.05);
+}
+
+/********** Stylists individual Pages **********/
+@media (min-width: 992px) {
+    .hero-section {
+        margin: 5% auto;
+    }
+
+    .stylist-profile {
+        align-items: center;
+    }
+
+    .stylist-profile-img {
+        border-radius: 40px;
+        opacity: 0;
+        transform: translateY(200px);
+        box-shadow: 0px 0px 25px 25px rgba(0,0,0,0.15);
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .stylist-profile-img.show {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .stylist-profile-card {
+        z-index: 1;
+        position: absolute;
+        opacity: 0;
+        background-color: rgba(1, 50, 32, .6);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        border-radius: 40px;
+        transform: translateY(200px);
+        box-shadow: 0px 0px 30px 30px rgba(0,0,0,0.25);
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-delay: .4s;
+        padding: 25px;
+    }
+
+    .stylist-profile-card.show {
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(0px);
+    }
+
+    .stylist-profile-name {
+        font-family: 'Northwell', sans-serif;
+        font-size: 4rem;
+        color: var(--light);
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .stylist-profile-bio {
+        font-family: 'Constantia', sans-serif;;
+        font-size: 1.25rem;
+        color: var(--light);
+    }
+
+    .my-services {
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    .fade-text {
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .fade-text span {
+        display: inline-block;
+        opacity: 0;
+        font-family: 'Constantia', sans-serif;
+        color: var(--green);
+        margin-bottom: 50px;
+        white-space: pre;
+        transform: translateY(50px);
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .fade-text span.fade-in {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .service1 {
+        font-size: 6rem;
+    }
+
+    .service2 {
+        font-size: 5.25rem;
+    }
+
+    .service3 {
+        font-size: 4.5rem;
+    }
+
+    .service4 {
+        font-size: 3.75rem;
+    }
+
+    .service5 {
+        font-size: 3rem;
+    }
+
+    .appointments {
+        margin-bottom: 100px;
+        margin-left: 0px;
+    }
+
+    .appointments-card {
+        border-radius: 40px;
+        padding: 40px;
+        background-color: var(--blue);
+        background-image: url('../images/leaves.png');
+        background-size: cover;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        box-shadow: 0px 0px 50px 50px rgba(0,0,0,0.15);
+    }
+
+    .appointments-card-title {
+        font-family: 'Northwell', sans-serif;
+        color: var(--light);
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .appointments-card-text {
+        font-family: 'Constantia', sans-serif;
+        color: var(--light);
+        font-size: 1.75rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .appointments-card-footer {
+        font-family: 'Constantia', sans-serif;
+        color: var(--light);
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .phone-number {
+        font-size: 2.255rem;
+    }
+
+    .appointments-card-line {
+        background-color: var(--light);
+        height: 1px;
+        width: 100%;
+        margin: 50px 0px;
+    }
+
+    .appointments-card-payments {
+        font-family: 'Northwell', sans-serif;
+        color: var(--light);
+        font-size: 3rem;
+        text-align: center;
+        list-style: none;
+        padding-left: 0px;
+        margin-top: 50px;
+    }
+
+    .appointments-card-payments li {
+        display: inline-block;
+        margin: 0px 10%;
+    }
+
+    .payment-icon {
+        transform: translateY(-10px);
+        color: var(--light);
+    }
+}
+
+.stylist-profile-img-mobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .stylist-profile-img {
+        display: none;
+    }
+
+    .stylist-profile-img-mobile {
+        display: flex;
+        border-radius: 30px 30px 0px 0px;
+        margin-top: 40px;
+    }
+
+    .stylist-profile-card {
+        border-radius: 0px 0px 30px 30px;
+        background-color: var(--green);
+        background-image: url('../images/leaves.png');
+        background-size: cover;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+
+    .stylist-profile-card-title {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .stylist-profile-name {
+        font-family: 'Northwell', sans-serif;
+        font-size: 2.5rem;
+        color: var(--light);
+        margin: 0px;
+    }
+
+    .stylist-profile-card-body {
+        display: flex;
+        font-family: 'Constantia', sans-serif;
+        font-size: .9rem;
+        color: var(--light);
+        text-align: center;
+        white-space: pre-line;
+    }
+
+    .swoosh-mobile {
+        width: 100%;
+    }
+
+    @media (max-width: 338px) {
+        .section-title-text {
+            font-size: 2rem;
+        }
+
+        .swoosh-mobile {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 283px) {
+        .section-title-text {
+            font-size: 1.5rem;
+        }
+
+        .swoosh-mobile {
+            font-size: .75rem;
+        }
+    }
+
+    .fade-text {
+        font-family: 'Constantia', sans-serif;
+        font-size: 1.5rem;
+        color: var(--green);
+    }
+
+    .my-services {
+        margin-top: 10%;
+        margin-bottom: 0px;
+    }
+
+    .services {
+        margin: 20px 0px;
+    }
+
+    .appointments {
+        margin: 0px;
+    }
+
+    .appointments-card {
+        margin: 0px auto 100px auto;
+        background-color: var(--blue);
+        background-image: url('../images/leaves.png');
+        background-size: cover;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        border-radius: 30px;
+    }
+
+    .appointments-card-text {
+        font-family: 'Constantia', sans-serif;
+        font-size: .9rem;
+        color: var(--light);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .appointments-card-title {
+        font-family: 'Northwell', sans-serif;
+        color: var(--light);
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .appointments-card-line {
+        background-color: var(--light);
+        height: 1px;
+        width: 100%;
+        display: flex;
+    }
+
+    .appointments-card-payments {
+        font-family: 'Northwell', sans-serif;
+        color: var(--light);
+        font-size: 2rem;
+        text-align: center;
+        list-style: none;
+        padding-left: 0px;
+        margin-top: 25px;
+    }
+
+    .appointments-card-payments li {
+        display: inline-block;
+        margin: 5%;
+    }
+
 }

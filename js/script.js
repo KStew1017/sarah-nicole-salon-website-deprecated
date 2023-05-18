@@ -1,5 +1,9 @@
 
 $(function () {
+    $('.hero-card').addClass('show');
+    $('.carousel').addClass('show');
+    $('.stylist-profile-card').addClass('show');
+    $('.stylist-profile-img').addClass('show');
 
 //---------- Reset scroll position on page refresh -----------//
     history.scrollRestoration = 'manual';
@@ -9,41 +13,71 @@ $(function () {
         $('#hamburger').toggleClass('open');
     });
     
-//---------- Intersection observer for fade in effect on first time viewed -----------//
+// //---------- Intersection observer for fade in effect on first time viewed -----------//
     if ($(window).width() > 768) {
         const cards = $(`
-            .stylist-card-odd, 
-            .stylist-card-even, 
-            .carousel, 
-            .hero-card, 
+            .stylist-card-odd,
+            .stylist-card-even,
             .section-title,
-            .map
+            .map,
+            .fade-text
         `);
-        
+
+        $('.fade-text').each(function() {
+            let newContent = '';
+            let length = $(this).text().length;
+            for (let i = 0; i < $(this).text().length; i++) {
+                if (i < 4) {
+                    newContent += `<span data-index="${i}">${$(this).text()[i]}</span>`;
+                } else if (i >= 4 ) {
+                    newContent += `<span data-index="${i}">${$(this).text()[i]}</span>`;
+                }
+            }
+            $(this).empty().append(newContent);
+        });
+
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $(entry.target).find('span').each(function(index, el) {
+                            setTimeout(() => {
+                                $(el).addClass('fade-in');
+                            }, index * 100);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.8 }
+        );
+
+        cards.each(function(index, element) {
+            observer.observe(element);
+        });
+
+        const observer2 = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
                     $(entry.target).toggleClass("show", entry.isIntersecting);
-                    if (entry.isIntersecting) observer.unobserve(entry.target);
+                    if (entry.isIntersecting) observer2.unobserve(entry.target);
                 })
             },
             { threshold: 0.8 }
         );
         
-        cards.each(function(index, card) {
-            observer.observe(card);
+        cards.each(function(index, element) {
+            observer2.observe(element);
         });
     } else {
         $(`
-        .stylist-card-odd, 
-        .stylist-card-even, 
-        .carousel, 
-        .hero-card, 
-        .section-title,
-        .map
+            .stylist-card-odd, 
+            .stylist-card-even, 
+            .section-title,
+            .map
         `).addClass('show');
     }
-    
+
 //---------- Navbar fade in effect on scroll -----------//
     function navbarScroll() {
         if (window.scrollY > 0) {
@@ -125,7 +159,5 @@ $(function () {
     } else if ($(window).width() > 768) {
         $('.meet-us-mobile').toggle('hide');
     }
+
 });
-
-
-
