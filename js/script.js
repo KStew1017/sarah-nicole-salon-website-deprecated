@@ -13,7 +13,7 @@ $(function () {
         $('#hamburger').toggleClass('open');
     });
     
-// //---------- Intersection observer for fade in effect on first time viewed -----------//
+//---------- Intersection observers -----------//
     if ($(window).width() > 768) {
         const cards = $(`
             .stylist-card-odd,
@@ -36,6 +36,7 @@ $(function () {
             $(this).empty().append(newContent);
         });
 
+        //---------- Intersection observer for fade in effect on first time viewed -----------//
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
@@ -56,6 +57,7 @@ $(function () {
             observer.observe(element);
         });
 
+        //---------- Intersection observer for fade in effect on first time viewed -----------//
         const observer2 = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
@@ -69,6 +71,39 @@ $(function () {
         cards.each(function(index, element) {
             observer2.observe(element);
         });
+
+        //---------- Intersection observer for active nav element -----------//
+        const sections = document.querySelectorAll('section');
+
+        const options = {
+            root: null,
+            threshold: 0.2,
+        };
+
+        let lastActiveNavElement = null;
+
+        const observer3 = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                const navElement = document.querySelector(`.nav-item.${entry.target.id}-ref`);
+
+                if (entry.isIntersecting) {
+                    navElement.classList.add('active');
+
+                    if (lastActiveNavElement && lastActiveNavElement !== navElement) {
+                        lastActiveNavElement.classList.remove('active');
+                    }
+
+                    lastActiveNavElement = navElement;
+                } else {
+                    navElement.classList.remove('active');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer3.observe(section);
+        });
+
     } else {
         $(`
             .stylist-card-odd, 

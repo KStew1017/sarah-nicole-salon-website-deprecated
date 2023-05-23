@@ -134,15 +134,15 @@ body {
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.home.active,
-.home:hover {
+.home-ref.active,
+.home-ref:hover {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     background-color: var(--tan);
 }
 
-.stylists.active,
-.stylists:hover {
+.stylists-ref.active,
+.stylists-ref:hover {
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: var(--tan);
@@ -155,19 +155,31 @@ body {
     background-color: var(--tan);
 }
 
-.location.active,
-.location:hover {
+.location-ref.active,
+.location-ref:hover {
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: var(--tan);
 }
 
+.services-ref.active,
+.services-ref:hover {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: var(--tan);
+}
 
-.contact.active,
-.contact:hover
- {
+.results-ref.active,
+.results-ref:hover {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    background-color: var(--tan);
+}
+
+.appointments-ref.active,
+.appointments-ref:hover {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     background-color: var(--tan);
 }
 
@@ -773,13 +785,6 @@ body {
     }
 }
 
-#testimonials {
-    background-color: transparent;
-    border: none;
-    margin-top: 0px;
-    margin-bottom: 10%;
-}
-
 .mobile-break {
     display: none;
 }
@@ -879,6 +884,11 @@ body {
 .testimonial {
     display: inline-block;
     padding-right: 150px;
+}
+
+.invis-divider {
+    color: transparent;
+    border: none;
 }
 
 #testimonial-pause,
