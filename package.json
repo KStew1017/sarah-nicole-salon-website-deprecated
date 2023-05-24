@@ -2,11 +2,10 @@
   "name": "salon-website",
   "version": "1.0.0",
   "description": "A website for Sarah Nicole Salon",
-  "main": "index.html",
+  "main": "app.js",
   "scripts": {
-    "lite": "lite-server",
-    "start": "npm run lite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon app.js",
+    "start": "node app.js"
   },
   "author": "Kyle Stewart",
   "license": "ISC",
@@ -17,8 +16,8 @@
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
-    "lite-server": "^2.6.1",
     "mini-css-extract-plugin": "^2.7.6",
+    "nodemon": "^2.0.22",
     "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1"
   },
@@ -26,6 +25,8 @@
     "@fortawesome/fontawesome-free": "^6.4.0",
     "bootstrap": "^4.5.2",
     "bootstrap-icons": "^1.10.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
     "jquery": "^3.5.1"
   }
 }

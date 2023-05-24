@@ -260,7 +260,7 @@ body {
 .container.hero {
     display: flex;
     justify-content: center;
-    height: 80vh;
+    height: 70vh;
 }
 
 .hero-row {
@@ -306,8 +306,8 @@ body {
 
     .parallax-wrapper {
         background-image: url('../images/R.png');
-        mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
         -webkit-mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
+        mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
         overflow: hidden;
     }
     
@@ -877,8 +877,8 @@ body {
 
 .marquee,
 .marquee2 {
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .testimonial {
@@ -1002,6 +1002,7 @@ a:hover {
 
     .stylist-profile {
         align-items: center;
+        height: 70vh;
     }
 
     .stylist-profile-img {

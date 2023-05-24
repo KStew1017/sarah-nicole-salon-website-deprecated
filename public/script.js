@@ -87,7 +87,9 @@ $(function () {
                 const navElement = document.querySelector(`.nav-item.${entry.target.id}-ref`);
 
                 if (entry.isIntersecting) {
-                    navElement.classList.add('active');
+                    if (!navElement.classList.contains('active')) {
+                        navElement.classList.add('active');
+                    }
 
                     if (lastActiveNavElement && lastActiveNavElement !== navElement) {
                         lastActiveNavElement.classList.remove('active');
@@ -122,7 +124,7 @@ $(function () {
         }
     }
 
-    window.addEventListener('scroll', navbarScroll);
+    window.addEventListener('scroll', navbarScroll, { passive: true });
 
 //---------- Testimonials marquee scroll -----------//
     const $mq = $('.marquee').marquee(
