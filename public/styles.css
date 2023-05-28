@@ -9,17 +9,17 @@
 
 @font-face {
     font-family: 'Northwell';
-    src: url('../fonts/Northwell.ttf');
+    src: url('./fonts/Northwell.ttf');
 }
 
 @font-face {
     font-family: 'Northwell Alt';
-    src: url('../fonts/Northwell Alt.ttf');
+    src: url('./fonts/Northwell Alt.ttf');
 }
 
 @font-face {
     font-family: 'Northwell Swash';
-    src: url('../fonts/Northwell Swash.ttf');
+    src: url('./fonts/Northwell Swash.ttf');
 }
 
 body {
@@ -305,7 +305,7 @@ body {
 @media (min-width: 992px) {
 
     .parallax-wrapper {
-        background-image: url('../images/R.png');
+        background-image: url('./images/R.png');
         -webkit-mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
         mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
         overflow: hidden;
@@ -561,7 +561,7 @@ body {
 @media (max-width: 991px) {
 
     .parallax-wrapper {
-        background-image: url('../images/R.png');
+        background-image: url('./images/R.png');
         background-size: contain;
         overflow: hidden;
     }
@@ -571,6 +571,7 @@ body {
         margin: 10% auto 10% auto;
         text-align: center;
     }
+
 
     .section-title.show {
         opacity: 1;
@@ -585,8 +586,8 @@ body {
 
     .section-title h1 {
         font-family: 'Northwell', sans-serif;
-        font-size: 5vh;
-        width: 100%;
+        margin: 0 auto;
+        position: relative;
     }
 
     ::-webkit-scrollbar {
@@ -624,23 +625,17 @@ body {
     
     .hero {
         display: flex;
-        justify-content: center;
         position: relative;
     }
     
     .hero-card {
         display: flex;
         border-radius: 0%;
-        position: inline;
-        align-content: center;
+        position: relative;
     }
 
     #stylists {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        margin: 100px auto;
+        margin: 100px auto 50px auto;
     }
 
     .carousel-indicators li {
@@ -842,7 +837,7 @@ body {
 
 .testimonials-section {
     background-color: var(--blue);
-    background-image: url('../images/leaves.png');
+    background-image: url('./images/leaves.png');
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -913,7 +908,7 @@ body {
 footer {
     padding: 40px 0px 40px 0px;
     background-color: var(--green);
-    background-image: url('../images/leaves.png');
+    background-image: url('./images/leaves.png');
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -1107,7 +1102,7 @@ a:hover {
         border-radius: 40px;
         padding: 40px;
         background-color: var(--blue);
-        background-image: url('../images/leaves.png');
+        background-image: url('./images/leaves.png');
         background-size: cover;
         background-repeat: repeat;
         background-attachment: fixed;
@@ -1186,7 +1181,7 @@ a:hover {
     .stylist-profile-card {
         border-radius: 0px 0px 30px 30px;
         background-color: var(--green);
-        background-image: url('../images/leaves.png');
+        background-image: url('./images/leaves.png');
         background-size: cover;
         background-repeat: repeat;
         background-attachment: fixed;
@@ -1260,7 +1255,7 @@ a:hover {
     .appointments-card {
         margin: 0px auto 100px auto;
         background-color: var(--blue);
-        background-image: url('../images/leaves.png');
+        background-image: url('./images/leaves.png');
         background-size: cover;
         background-repeat: repeat;
         background-attachment: fixed;

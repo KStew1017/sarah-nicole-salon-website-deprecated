@@ -1,5 +1,5 @@
 
-$(function () {
+$(window).on('load', function () {
     $('.hero-card').addClass('show');
     $('.carousel').addClass('show');
     $('.stylist-profile-card').addClass('show');
