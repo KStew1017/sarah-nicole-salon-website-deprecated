@@ -599,6 +599,7 @@ body {
     }
     
     .navbar {
+        display: flex;
         position: relative;
     }
 
@@ -624,22 +625,22 @@ body {
     .hero {
         display: flex;
         justify-content: center;
-        align-items: center;
         position: relative;
     }
     
     .hero-card {
+        display: flex;
         border-radius: 0%;
-        margin-top: 40px;
-        max-width: 100%;
-        position: relative;
+        position: inline;
         align-content: center;
     }
 
-    .carousel {
-        width: 100%;
-        align-content: center;
-        margin-bottom: 50px;
+    #stylists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin: 100px auto;
     }
 
     .carousel-indicators li {
@@ -664,7 +665,6 @@ body {
     .hide {
         display: none;
     }
-
 
     .card {
         position: relative;
