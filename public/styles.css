@@ -22,6 +22,11 @@
     src: url('./fonts/Northwell Swash.ttf');
 }
 
+@font-face {
+    font-family: 'Constantia';
+    src: url('./fonts/constan.ttf');
+}
+
 body {
     background-color: var(--light);
     font-family: 'Poppins', sans-serif;
@@ -260,7 +265,6 @@ body {
 .container.hero {
     display: flex;
     justify-content: center;
-    height: 70vh;
 }
 
 .hero-row {
@@ -597,11 +601,13 @@ body {
     .navbar-brand {
         font-size: 2rem;
         margin-top: 15px;
+        opacity: 1 !important;
     }
     
     .navbar {
         display: flex;
         position: relative;
+        opacity: 1 !important;
     }
 
     .navbar.scrolled {
@@ -632,10 +638,6 @@ body {
         display: flex;
         border-radius: 0%;
         position: relative;
-    }
-
-    #stylists {
-        margin: 100px auto 50px auto;
     }
 
     .carousel-indicators li {
@@ -757,6 +759,7 @@ body {
 
     .map {
         display: flex !important;
+        opacity: 1 !important;
     }
 
     .footer-title {
