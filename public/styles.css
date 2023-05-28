@@ -178,8 +178,8 @@ body {
 
 .appointments-ref.active,
 .appointments-ref:hover {
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     background-color: var(--tan);
 }
 
