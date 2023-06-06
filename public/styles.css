@@ -840,7 +840,8 @@ body {
     }
 
     .angela-result {
-        height: 100% !important;
+        width: 100% !important;
+        aspect-ratio: 1/1 !important;
     }
 }
 
