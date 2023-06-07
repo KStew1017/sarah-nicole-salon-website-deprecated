@@ -32,7 +32,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar {
+.navbar::before {
     background-color: transparent;
     transition: all 0.5s ease 0s;
 }
@@ -825,7 +825,7 @@ body {
 
     .results-img:hover {
         transform: scale(2);
-        box-shadow: 0px 0px 20px 20px var(--light);
+        box-shadow: 0px 0px 20px 20px rgba(248, 240, 235, .5);
         z-index: 1;
     }
 
@@ -999,6 +999,10 @@ footer {
     text-align: center;
 }
 
+.copyright {
+    font-size: .75rem;
+}
+
 .footer-line {
     background-color: var(--light);
     height: 1px;
@@ -1109,8 +1113,9 @@ a:hover {
 
     .stylist-profile-bio {
         font-family: 'Constantia', sans-serif;;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         color: var(--light);
+        white-space: pre-line;
     }
 
     .stylist-card-content {
@@ -1335,7 +1340,8 @@ a:hover {
 
     .fade-text {
         font-family: 'Constantia', sans-serif;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin-bottom: 20px;
         color: var(--green);
     }
 
@@ -1345,7 +1351,7 @@ a:hover {
     }
 
     .services {
-        margin: 20px 0px;
+        margin: 25px 0px;
     }
 
     .appointments {
