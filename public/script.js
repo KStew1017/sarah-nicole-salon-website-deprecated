@@ -124,7 +124,7 @@ $(window).on('load', function () {
         }
     }
 
-    window.addEventListener('scroll', navbarScroll, { passive: true });
+    window.addEventListener('scroll', navbarScroll);
 
 //---------- Testimonials marquee scroll -----------//
     const $mq = $('.marquee').marquee(

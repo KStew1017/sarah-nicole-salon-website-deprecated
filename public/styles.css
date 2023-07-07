@@ -32,14 +32,9 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar::before {
-    background-color: transparent;
-    transition: all 0.5s ease 0s;
-}
 
 .navbar.scrolled {
     background-color: var(--light);
-    box-shadow: 0px 0px 50px 50px rgba(0,0,0,0.15);
 }
 
 .navbar-brand {
@@ -631,7 +626,7 @@ body {
     
     .navbar {
         display: flex;
-        position: relative;
+        position: absolute;
         opacity: 1 !important;
     }
 
