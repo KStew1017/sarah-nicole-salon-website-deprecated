@@ -144,8 +144,8 @@ body {
 
 .stylists-ref.active,
 .stylists-ref:hover {
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     background-color: var(--tan);
 }
 
@@ -158,15 +158,15 @@ body {
 
 .location-ref.active,
 .location-ref:hover {
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     background-color: var(--tan);
 }
 
 .services-ref.active,
 .services-ref:hover {
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     background-color: var(--tan);
 }
 
@@ -179,8 +179,8 @@ body {
 
 .appointments-ref.active,
 .appointments-ref:hover {
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     background-color: var(--tan);
 }
 
@@ -458,22 +458,6 @@ body {
         transform: translateX(0px);
     }
 
-    .stylist-card-even:hover {
-        transform: translateX(-50px) translateY(50px);
-    }
-
-    .stylist-card-odd:hover {
-        transform: translateX(50px) translateY(50px);
-    }
-    
-    .stylist-card-even:hover .headshot-even {
-        transform: scale(1.1) translateX(50px) translateY(-25px);
-    }
-
-    .stylist-card-odd:hover .headshot-odd {
-        transform: scale(1.1) translateX(-50px) translateY(-25px);
-    }
-
     .headshot-odd {
         border-radius: 50%;
         box-shadow: 0px 0px 25px 25px rgba(0,0,0,0.15);
@@ -531,7 +515,8 @@ body {
     }
 
     .results-img:hover {
-        transform: scale(1.4);
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.5);
         z-index: 1;
     }
 
@@ -880,9 +865,11 @@ body {
 
 .stylist-click-me {
     font-family: 'Constantia', sans-serif;
-    color: #a7a7a7;
     font-size: 1.25rem;
     text-align: center;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .background-img-card {
@@ -1015,6 +1002,14 @@ a:hover {
     color: var(--light);
 }
 
+.hero-phone-number {
+    font-size: 24px;
+}
+
+.hero-phone-number:hover {
+    color: var(--green);
+}
+
 .swoosh {
     font-family: 'Northwell Swash', sans-serif;
 }
@@ -1034,7 +1029,7 @@ a:hover {
 }
 
 .map {
-    margin: 0px auto 100px auto;
+    margin: 0px auto 200px auto;
     height: 60vh;
     width: 100%;
     border: none;
@@ -1048,10 +1043,6 @@ a:hover {
 .map.show {
     transform: translateX(0px);
     opacity: 1;
-}
-
-.map:hover {
-    transform: scale(1.05);
 }
 
 /********** Stylists individual Pages **********/

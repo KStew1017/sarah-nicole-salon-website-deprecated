@@ -50,7 +50,7 @@ $(window).on('load', function () {
                     }
                 });
             },
-            { threshold: 0.8 }
+            { threshold: 0.2 }
         );
 
         cards.each(function(index, element) {
@@ -65,7 +65,7 @@ $(window).on('load', function () {
                     if (entry.isIntersecting) observer2.unobserve(entry.target);
                 })
             },
-            { threshold: 0.8 }
+            { threshold: 0.2 }
         );
         
         cards.each(function(index, element) {
@@ -129,7 +129,7 @@ $(window).on('load', function () {
 //---------- Testimonials marquee scroll -----------//
     const $mq = $('.marquee').marquee(
         {
-        duration: 20000,
+        duration: 30000,
         gap: 0,
         direction: 'left',
         duplicated: true,
@@ -139,7 +139,7 @@ $(window).on('load', function () {
 
     const $mq2 = $('.marquee2').marquee(
         {
-        duration: 10000,
+        duration: 30000,
         gap: 0,
         direction: 'right',
         duplicated: true,
