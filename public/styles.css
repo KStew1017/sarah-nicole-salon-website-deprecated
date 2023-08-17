@@ -516,13 +516,18 @@ body {
 
     .results-img:hover {
         transform: scale(1.1);
-        box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.25);
         z-index: 1;
     }
 
     .angela-result {
         height: 300px !important;
         width: 300px !important;
+    }
+
+    .angela-result-format {
+        height: 500px !important;
+        width: 500px !important;
     }
 }
 
